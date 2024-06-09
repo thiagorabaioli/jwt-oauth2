@@ -68,6 +68,10 @@ public class User implements UserDetails {
         this.email = email;
     }
 
+    public void userAddRole(Role role) {
+        roles.add(role);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;
