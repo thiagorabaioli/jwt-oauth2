@@ -19,5 +19,9 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("ENCODE = " +passwordEncoder.encode("123456"));
+
+		boolean result = passwordEncoder.matches("123457","$2a$10$.BWqaq1.I.ixMpRdT.zxVeCTZFOZp6hPZ5nEYIyov/Mk0ZATbdkVy");
+		System.out.println(result);
+
 	}
 }
